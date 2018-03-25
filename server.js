@@ -17,44 +17,11 @@ const db = knex({
     }
   });
 
-// db.select('*'). from('users').then(data => {
-//     // console.log(data);
-// });
-
-
 const app = express();
 
 app.use(cors())
 app.use(bodyParser.json());
 
-
-// const database = {
-//     users: [
-//         {
-//             id: '123',
-//             name: 'John',
-//             password: 'cookies',
-//             email: 'john@gmail.com',
-//             entries: 0,
-//             joined: new Date()
-//         },
-//         {
-//             id: '124',
-//             name: 'Sally',
-//             password: 'bananas',
-//             email: 'sally@gmail.com',
-//             entries: 0,
-//             joined: new Date()
-//         }
-//     ],
-//     login: [
-//       {  
-//         id: '987',
-//         has: '',
-//         email: 'john@gmail.com'
-//       }
-//     ]
-// }
 
 app.get('/', (req, res) => {res.send('it is working!') })
 //alt way of writing see signin post and sigin.js
